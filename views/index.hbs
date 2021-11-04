@@ -1,0 +1,22 @@
+<div class="container-fluid d-flex flex-column align-items-center vh-100">
+  <div class="d-flex flex-column align-items-center">
+    <button data-search class="btn btn-info">Are you bored ?!</button>
+  </div>
+  <h2 class="text-white m-5" data-activity></h2>
+  <ul class="d-none nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="d-none nav-item" role="presentation">
+      <button class="text-white nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Images</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="text-white nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Videos</button>
+    </li>
+  </ul>
+  <div class="tab-content window-wrapper col-8 h-75 d-flex" id="pills-tabContent">
+    <div data-image-wrapper class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
+    <div data-video-wrapper class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    </div>
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
+  </div>
+</div>
+
+<script type="module" src="/js/main.js"></script>

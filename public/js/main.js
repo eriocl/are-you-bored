@@ -10,6 +10,10 @@ const navMenu = document.querySelector(('.nav.nav-pills'));
 searchButton.addEventListener('click', async () => {
   imageWrapper.innerHTML = '';
   videoWrapper.innerHTML = '';
+  activityElem.textContent = '';
+  navMenu.classList.add('d-none');
+  imageWrapper.classList.add('d-none');
+  videoWrapper.classList.add('d-none');
   const responseActivity = await fetch('http://www.boredapi.com/api/activity/');
   if (responseActivity.ok) {
     const data = await responseActivity.json();
@@ -19,7 +23,6 @@ searchButton.addEventListener('click', async () => {
   if (responseSearch.ok) {
     const dataSearch = await responseSearch.json();
     const { video, image } = dataSearch;
-
     const imageUrls = image.results
       .map((el) => el.img_src)
       .filter((el) => el);
@@ -28,18 +31,17 @@ searchButton.addEventListener('click', async () => {
       newImg.addEventListener('error', () => newImg.remove());
       imageWrapper.append(newImg);
     });
-    document.addEventListener('load', () => {
-      navMenu.styles.classList.remove('d-none');
-    });
-
     const videoUrls = video.results
       .filter((el) => el.embedded)
-      .map((el) => el.embedded.match(/src=\"(.*?)\"/)[1]);
-    console.log(videoUrls);
-    videoUrls.forEach((url) => {
+      .map((el) => el.embedded.match(/src="(.*?)"/)[1]);
+    videoUrls.reverse().forEach((url) => {
       const newVideo = createVideoElem(url);
-      newVideo.addEventListener('error', () => newVideo.remove());
       videoWrapper.append(newVideo);
     });
+    setTimeout(() => {
+      navMenu.classList.remove('d-none');
+      imageWrapper.classList.remove('d-none');
+      videoWrapper.classList.remove('d-none');
+    }, 3000);
   }
 });

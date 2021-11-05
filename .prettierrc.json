@@ -5,10 +5,11 @@
   "singleQuote": true,
   "overrides": [
     {
-      "files": ["*.html", "*.hbs"],
+      "files": ["*.html", "*.hbs", "*.css"],
       "options": {
         "printWidth":300,
-        "singleQuote": false
+        "singleQuote": false,
+        "tabWidth": 4
       }
     }
   ]

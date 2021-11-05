@@ -1,14 +1,14 @@
-<div class="container-fluid d-flex flex-column align-items-center vh-100">
-  <div class="d-flex flex-column align-items-center">
+<div data-content class="container-fluid d-flex flex-column align-items-center">
+  <div class="d-flex flex-column align-items-center rounded shadow shadow-lg mb-3">
     <button data-search class="btn btn-primary">Are you bored ?!</button>
   </div>
-  <h2 class="text-white m-2" data-activity></h2>
+  <h2 class="text-white mb-5" data-activity></h2>
     <ul class="d-none nav nav-pills" id="pills-tab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="text-white nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Images</button>
+      <li class="nav-item mb-1 " role="presentation">
+        <button data-menu-button class="text-white nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Images</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="text-white nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Videos</button>
+        <button data-menu-button class="text-white nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Videos</button>
       </li>
     </ul>
     <div class="tab-content window-wrapper col-8 h-75 d-flex" id="pills-tabContent">

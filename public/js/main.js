@@ -5,7 +5,14 @@ const activityElem = document.querySelector('[data-activity]');
 const searchButton = document.querySelector('[data-search]');
 const imageWrapper = document.querySelector('[data-image-wrapper]');
 const videoWrapper = document.querySelector('[data-video-wrapper]');
+const windowWrapper = document.querySelector('.window-wrapper');
 const navMenu = document.querySelector(('.nav.nav-pills'));
+
+navMenu.addEventListener('click', (e) => {
+  if (e.target.hasAttribute('data-menu-button')) {
+    windowWrapper.scrollTop = 0;
+  }
+});
 
 searchButton.addEventListener('click', async () => {
   imageWrapper.innerHTML = '';
@@ -42,6 +49,6 @@ searchButton.addEventListener('click', async () => {
       navMenu.classList.remove('d-none');
       imageWrapper.classList.remove('d-none');
       videoWrapper.classList.remove('d-none');
-    }, 3000);
+    }, 2000);
   }
 });

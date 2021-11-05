@@ -20,24 +20,6 @@ body {
     height: 300px;
 }
 
-iframe {
-    z-index: 4;
-}
-
-.fade {
-    z-index: 1;
-}
-
-.active {
-    z-index: 3;
-}
-img {
-    z-index: 1;
-}
-.z-index1 {
-    z-index: 1;
-}
-
 .tab-content > .active {
     display: flex;
     flex-wrap: wrap;
@@ -45,6 +27,9 @@ img {
     gap: 10px;
 }
 
+[data-content] {
+    height: 90vh;
+}
 .form-text {
     color: white;
 }

@@ -18,7 +18,7 @@ const { PORT } = process.env || 3000;
 app.set('views', path.join(process.env.PWD, 'views'));
 app.set('view engine', 'hbs');
 hbs.registerPartials(path.join(process.env.PWD, 'views/partials'));
-// hbs.registerHelper('isFirstElement', isFirstElement);
+
 
 app.use(logger('dev'));
 app.use(express.json());
